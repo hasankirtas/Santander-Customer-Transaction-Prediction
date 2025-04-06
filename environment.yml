@@ -1,0 +1,16 @@
+name: sandanter_customer_transaction_prediction
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas
+  - numpy
+  - scikit-learn
+  - xgboost
+  - joblib
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - scikit-optimize
+      - imbalanced-learn
