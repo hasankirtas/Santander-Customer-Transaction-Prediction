@@ -58,7 +58,7 @@ Recognizing the limitations of a single model in handling imbalanced data:
 #### **7. Ensemble Modeling and Final Prediction**
 - Combined the XGBoost and Random Forest models using a **soft-voting VotingClassifier**, which allowed the ensemble to leverage the strengths of each base model.
 - Generated predictions on the test set and submitted them to Kaggle.
-- Achieved a **ROC-AUC score of approximately 0.84**, indicating solid performance and reliable separation of the classes.
+- Achieved a **ROC-AUC score of approximately 0.85500**, indicating solid performance and reliable separation of the classes.
 
 ---
 
