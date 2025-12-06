@@ -1,4 +1,4 @@
-# Core dependencies (required for production code)
+# Core dependencies (required for main code)
 pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.6.1

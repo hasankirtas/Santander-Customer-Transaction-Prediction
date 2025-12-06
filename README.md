@@ -93,6 +93,7 @@ Centralized configuration file containing:
 #### `src/features/feature_analyzer.py`
 - `FeatureAnalyzer`: Analyzes feature importance
 - Methods: `analyze_lasso_features()`, `analyze_rf_features()`, `analyze_xgb_features()`, `analyze_shap_values()`
+- **Note**: SHAP analysis is provided for model explainability during development/analysis phase only. It is computationally expensive and not used in the main prediction pipeline.
 
 #### `src/features/feature_selector.py`
 - `FeatureSelector`: Provides feature lists
@@ -154,8 +155,9 @@ Prediction pipeline that:
 
 ### **2. Statistical Feature Analysis**
 
-- Analyzed the **skewness and kurtosis** of each feature. Although many variables showed deviations from normality, transformations were not applied since models employed were non-parametric and non-linear.
+- Analyzed the **skewness and kurtosis** of each feature. Although many variables showed deviations from normality, transformations were not applied since models employed were non-parametric and non-linear (tree-based models like Random Forest and XGBoost are robust to non-normal distributions).
 - Explored **correlations** among features and discovered very weak or no correlations, which allowed for greater freedom during feature selection.
+- **Feature Engineering Strategy**: Given that the dataset consists of 200 anonymized numerical features and tree-based models are used, extensive feature transformations (e.g., PCA, RankGauss) were not applied. Tree-based models can capture non-linear relationships and interactions inherently, making additional transformations less critical. This approach prioritizes model interpretability and computational efficiency while maintaining strong predictive performance.
 
 ### **3. Class-wise Feature Distribution Comparison**
 
@@ -169,9 +171,11 @@ To identify the most impactful features, I employed multiple techniques and cros
 - **Lasso Regression (L1 Regularization)**
 - **XGBoost Feature Importance**
 - **Random Forest Feature Importance**
-- **SHAP Values (SHapley Additive exPlanations)**
+- **SHAP Values (SHapley Additive exPlanations)** - Used for analysis-time explainability only, not in the main prediction pipeline
 
 I compared the top features obtained from each method with the features flagged during distribution analysis to refine a set of **truly discriminative features for each class**.
+
+> **Note on Data Leakage Prevention**: All feature selection analyses were performed on training data only, with proper train-test splits. The final feature lists used in the pipeline are fixed and determined before model training, ensuring no information leakage from test data.
 
 ### **5. Handling Class Imbalance**
 
@@ -325,7 +329,7 @@ These dependencies are **required** for the main code (scripts in `scripts/`):
 | `matplotlib` | 3.9.2 | Plotting and visualization |
 | `seaborn` | 0.13.2 | Statistical data visualization |
 | `imbalanced-learn` | 0.12.3 | Resampling techniques (TomekLinks, RandomUnderSampler) |
-| `shap` | >=0.42.0 | Model explainability and feature importance |
+| `shap` | >=0.42.0 | Model explainability and feature importance (analysis-time only, not used in main pipeline) |
 
 ### Optional Dependencies
 

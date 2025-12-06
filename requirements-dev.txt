@@ -4,6 +4,9 @@
 
 -r requirements.txt
 
+# Build dependencies
+setuptools>=65.0.0  # Required for setup.py
+
 # Optional dependencies for notebooks
 statsmodels>=0.14.0  # Statistical analysis in notebooks
 scipy>=1.11.0        # Statistical functions (already in conda env)
