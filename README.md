@@ -1,12 +1,12 @@
-# Project: Santander Customer Transaction Prediction
+# Santander Customer Transaction Prediction - Competition Solution
 
 ### Overview
 
-This project is based on the Kaggle competition **"Santander Customer Transaction Prediction"**, where the main objective is to predict whether a customer will make a specific transaction or not. 
+This competition solution is based on the Kaggle competition **"Santander Customer Transaction Prediction"**, where the main objective is to predict whether a customer will make a specific transaction or not. 
 
 The dataset consists of **200 anonymized and purely numerical independent features**, and the target variable `target` is binary (0 or 1). The goal is to develop a robust classification model that can accurately identify customers likely to make a transaction using these independent variables.
 
-This project holds a special place in my journey as a data scientist. It has been the most demanding and intellectually challenging project I've worked on so far. It pushed me to revisit core statistical theories, and even led me to start reading *An Introduction to Statistical Learning*, a classic in machine learning literature. The insights gained from this book shaped many of the modeling strategies I implemented throughout the project.
+This competition holds a special place in my journey as a data scientist. It has been the most demanding and intellectually challenging competition I've worked on so far. It pushed me to revisit core statistical theories, and even led me to start reading *An Introduction to Statistical Learning*, a classic in machine learning literature. The insights gained from this book shaped many of the modeling strategies I implemented throughout this competition.
 
 ---
 
@@ -228,7 +228,7 @@ Recognizing the limitations of a single model in handling imbalanced data:
    pip install -r requirements-dev.txt
    ```
    
-   > **Note**: The original Jupyter notebooks have been removed as the project now uses pipeline scripts. All functionality is available through `scripts/train_pipeline.py` and `scripts/predict_pipeline.py`.
+   > **Note**: The original Jupyter notebooks have been removed as the solution now uses pipeline scripts. All functionality is available through `scripts/train_pipeline.py` and `scripts/predict_pipeline.py`.
 
    **Using conda:**
    ```bash
@@ -377,19 +377,19 @@ These dependencies are **optional** and only needed for specific use cases:
 
 ## 📝 Personal Insight & Additional Experiments
 
-This project wasn't just technical — it was personal. I had set it aside multiple times, but persistent curiosity and a sense of unfinished business kept bringing me back. Along the way, I:
+This competition wasn't just technical — it was personal. I had set it aside multiple times, but persistent curiosity and a sense of unfinished business kept bringing me back. Along the way, I:
 
 - Revisited foundational statistical theory through *An Introduction to Statistical Learning*, which inspired several modeling experiments.
 - Tested advanced models like **Quadratic Discriminant Analysis** and **Naive Bayes**, influenced by the book's *Classification* chapter. Although they didn't outperform tree-based models, they offered valuable learning opportunities.
 - Created **polynomial interaction features** in an attempt to capture possible non-linear relationships between variables.
 
-Through this project and similar Kaggle challenges, I better understood **why the industry often favors models like XGBoost, Random Forest, LightGBM, and Deep Learning** over classical techniques like Linear or Logistic Regression — especially in complex, high-dimensional, and noisy datasets.
+Through this competition and similar Kaggle challenges, I better understood **why the industry often favors models like XGBoost, Random Forest, LightGBM, and Deep Learning** over classical techniques like Linear or Logistic Regression — especially in complex, high-dimensional, and noisy datasets.
 
 ---
 
 ## 🎓 Key Learnings
 
-This project reinforced the value of:
+This competition reinforced the value of:
 - **Perseverance**: Coming back to challenging problems
 - **Curiosity**: Exploring different approaches and techniques
 - **Foundational Knowledge**: Understanding theory behind methods
@@ -400,13 +400,13 @@ This project reinforced the value of:
 
 ## 🤝 Contributing
 
-This is a personal project, but suggestions and feedback are welcome!
+This is a personal competition solution, but suggestions and feedback are welcome!
 
 ---
 
 ## 📄 License
 
-This project is for educational purposes.
+This competition solution is for educational purposes.
 
 ---
 
@@ -435,9 +435,9 @@ For questions or feedback, please open an issue on GitHub.
 
 ## 💭 My Thoughts and Insights
 
-This project reinforced the value of perseverance, curiosity, and foundational knowledge in machine learning. It taught me that data science isn't just about models — it's about understanding the data, asking the right questions, and never hesitating to go back to theory when things don't work out as expected.
+This competition reinforced the value of perseverance, curiosity, and foundational knowledge in machine learning. It taught me that data science isn't just about models — it's about understanding the data, asking the right questions, and never hesitating to go back to theory when things don't work out as expected.
 
-The refactoring of this project into a modular structure represents another learning milestone — practicing to write maintainable code that can be easily understood, modified, and extended.
+The refactoring of this competition solution into a modular structure represents another learning milestone — practicing to write maintainable code that can be easily understood, modified, and extended.
 
 ---
 

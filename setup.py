@@ -1,5 +1,5 @@
 """
-Setup script for Santander Customer Transaction Prediction project.
+Setup script for Santander Customer Transaction Prediction competition solution.
 """
 
 from setuptools import setup, find_packages
@@ -23,7 +23,7 @@ setup(
     name="santander-customer-transaction-prediction",
     version="1.0.0",
     author="Hasan Kirtas",
-    description="Machine learning project for Santander Customer Transaction Prediction",
+    description="Machine learning competition solution for Santander Customer Transaction Prediction",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/hasankirtas/Santander-Customer-Transaction-Prediction",
