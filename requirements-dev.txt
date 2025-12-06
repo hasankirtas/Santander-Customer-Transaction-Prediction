@@ -1,0 +1,11 @@
+# Development and notebook dependencies
+# Install with: pip install -r requirements-dev.txt
+# This includes all optional dependencies for running notebooks
+
+-r requirements.txt
+
+# Optional dependencies for notebooks
+statsmodels>=0.14.0  # Statistical analysis in notebooks
+scipy>=1.11.0        # Statistical functions (already in conda env)
+optuna>=3.0.0        # Hyperparameter optimization
+

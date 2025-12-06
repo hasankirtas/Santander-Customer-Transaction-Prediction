@@ -1,3 +1,4 @@
+# Core dependencies (required for production code)
 pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.6.1
@@ -6,3 +7,10 @@ joblib==1.4.2
 matplotlib==3.9.2
 seaborn==0.13.2
 imbalanced-learn==0.12.3
+shap>=0.42.0
+
+# Optional dependencies (used in notebooks for analysis and hyperparameter tuning)
+# Uncomment if you want to run the notebooks:
+# statsmodels>=0.14.0  # Used for statistical analysis in notebooks
+# scipy>=1.11.0         # Used for statistical functions in notebooks
+# optuna>=3.0.0         # Used for hyperparameter optimization in notebooks
